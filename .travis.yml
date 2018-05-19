@@ -6,5 +6,4 @@ addons:
     organization: "rickmussi"
 
  script:
-   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-   clean org.jacoco:jacoco-maven-plugin:prepare-agent test org.sonarsource.scanner.maven:sonar-maven-plugin:LATEST:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${c59e109bb2b511a5c5ea513e815ca57c3f1d8394}
+   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent test org.sonarsource.scanner.maven:sonar-maven-plugin:LATEST:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${c59e109bb2b511a5c5ea513e815ca57c3f1d8394}
