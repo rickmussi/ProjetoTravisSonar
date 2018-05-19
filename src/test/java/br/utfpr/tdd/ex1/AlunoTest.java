@@ -66,6 +66,12 @@ public class AlunoTest {
         aluno.setNotaProjeto(5.0);
         aluno.setNotaRAA(6.0);
         
+        
+        boolean notaMaiorQue6 = false;
+        if(aluno.getNF() > 6.0) {
+        notaMaiorQue6=true;
+        }
         assertEquals((5.0 + 6.0 + mediaRAA) / 3.0, aluno.getNF(), 0.01);
+        assertFalse(notaMaiorQue6);
     }        
 }
