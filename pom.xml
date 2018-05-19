@@ -12,9 +12,9 @@
             <version>1.5</version>
         </dependency>        
         <dependency>
-          <groupId>commons-io</groupId>
-          <artifactId>commons-io</artifactId>
-          <version>2.5</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
         </dependency>        
         <dependency>
             <groupId>junit</groupId>
@@ -39,7 +39,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-             <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-          <sonar.login>exerciciotravissonar</sonar.login>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>rickmussi@hotmail.com</sonar.login>
+        <sonar.password>rbm44791044</sonar.password>
     </properties>
 </project>
