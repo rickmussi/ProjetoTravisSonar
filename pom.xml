@@ -39,9 +39,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <sonar.host.url>mvn sonar:sonar \
-  -Dsonar.organization=exerciciotravissonar \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=exerciciotravissonar</sonar.host.url>
+             <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+          <sonar.login>exerciciotravissonar</sonar.login>
     </properties>
 </project>
