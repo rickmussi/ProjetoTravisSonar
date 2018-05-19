@@ -3,7 +3,7 @@ dist: trusty
 
 addons:
   sonarcloud:
-    organization: "exerciciotravissonar"
+    organization: "ExercicioTravisSonar"
 
  script:
-    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.login=${SONAR_TOKEN}
+   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
