@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: br.utfpr.tdd.ex1.EscritorCSVTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.505 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.395 sec
