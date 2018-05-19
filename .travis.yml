@@ -3,7 +3,7 @@ dist: trusty
 
 addons:
   sonarcloud:
-    organization: "projetotravissonar"
+    organization: "rickmussi"
 
  script:
    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
