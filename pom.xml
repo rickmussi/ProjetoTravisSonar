@@ -39,8 +39,5 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.login>rickmussi@hotmail.com</sonar.login>
-        <sonar.password>rbm44791044</sonar.password>
     </properties>
 </project>
