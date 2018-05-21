@@ -3,7 +3,6 @@ language: java
 addons:
   sonarcloud:
     organization: "TDD-ex1"
-    token:
-      secure: "65e5af2e87c10045a8c1d545829a1739869fcdde" # encrypted value of your token
- script:
-   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar    
