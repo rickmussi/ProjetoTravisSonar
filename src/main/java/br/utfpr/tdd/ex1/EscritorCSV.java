@@ -1,6 +1,7 @@
 package br.utfpr.tdd.ex1;
 
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.math.RoundingMode;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -17,35 +18,39 @@ import org.apache.commons.csv.CSVPrinter;
  * @author andreendo
  */
 class EscritorCSV {
+
     CSVPrinter csvPrinter;
     private final static Logger LOGGER = Logger.getLogger(EscritorCSV.class.getName());
-    
+
     void escrever(String ra, String nome, double notaFinal, String situacao) {
         try {
-            Locale locale  = new Locale("en", "UK");
-            DecimalFormat df = (DecimalFormat)
-                                NumberFormat.getNumberInstance(locale);
+            Locale locale = new Locale("en", "UK");
+            DecimalFormat df = (DecimalFormat) NumberFormat.getNumberInstance(locale);
             df.applyPattern(".#");
             df.setRoundingMode(RoundingMode.DOWN);
             csvPrinter.printRecord(ra, nome, df.format(notaFinal), situacao);
-            csvPrinter.flush();            
-        }
-        catch(Exception e) {
+            csvPrinter.flush();
+        } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
         }
     }
 
     void setArquivoSaida(String filePath) {
+        BufferedWriter writer = null;
         try {
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get(filePath));
+            writer = Files.newBufferedWriter(Paths.get(filePath));
 
             csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
-                .withHeader("RA", "Nome", "NF", "Situacao"));
-            csvPrinter.flush();            
-        }
-        catch(Exception e) {
+                    .withHeader("RA", "Nome", "NF", "Situacao"));
+            csvPrinter.flush();
+        } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                writer.close();
+            } catch (IOException ex) {
+                Logger.getLogger(EscritorCSV.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
-    
 }
