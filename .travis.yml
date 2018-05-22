@@ -2,8 +2,15 @@ language: java
 
 addons:
   sonarcloud:
+<<<<<<< HEAD
     organization: "TDD-ex1"
     token:
       secure: "65e5af2e87c10045a8c1d545829a1739869fcdde"
  script:
    - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+=======
+    organization: "rickmussi-github"
+
+script:
+   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar 
+>>>>>>> 31d7f34ae41302ce4d86fcce162ab694027e67bd
