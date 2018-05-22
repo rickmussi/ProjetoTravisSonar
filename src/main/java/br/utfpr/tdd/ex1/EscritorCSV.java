@@ -35,22 +35,15 @@ class EscritorCSV {
         }
     }
 
-    void setArquivoSaida(String filePath) {
-        BufferedWriter writer = null;
+    void setArquivoSaida(String filePath) {        
         try {
-            writer = Files.newBufferedWriter(Paths.get(filePath));
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get(filePath));
 
             csvPrinter = new CSVPrinter(writer, CSVFormat.DEFAULT
                     .withHeader("RA", "Nome", "NF", "Situacao"));
             csvPrinter.flush();
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-            try {
-                writer.close();
-            } catch (IOException ex) {
-                Logger.getLogger(EscritorCSV.class.getName()).log(Level.SEVERE, null, ex);
-            }
         }
     }
 }
